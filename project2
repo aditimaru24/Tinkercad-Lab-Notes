@@ -1,0 +1,33 @@
+## Project 2: Traffic Light Simulator
+**Description:** A simulation of a standard three-way traffic light system. This project demonstrates control over multiple GPIO (General Purpose Input/Output) pins simultaneously and implements sequential logic using precise time delays to transition between states safely.
+
+* **Tools Used:** Tinkercad, Arduino C++
+* **Hardware Interfaced:** 3x LEDs (Red, Yellow, Green), 3x 220Ω Resistors
+
+### Circuit Layout
+file:///C:/Users/aditi/OneDrive/Pictures/Screenshots/Screenshot%202026-06-18%20160101.png
+
+### Code
+```cpp
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(11, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(11, LOW);
+  delay(500); // Wait for 500 millisecond(s)
+  
+  digitalWrite(10, HIGH);
+  delay(400); // Wait for 400 millisecond(s)
+  digitalWrite(10, LOW);
+  delay(500);
+  
+  digitalWrite(9, HIGH);
+  delay(800); // Wait for 800 millisecond(s)
+  digitalWrite(9, LOW);
+  delay(500);
+}
